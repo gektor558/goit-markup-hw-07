@@ -1,0 +1,163 @@
+.menu-list,
+.address {
+  display: none;
+}
+
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--iris);
+}
+
+.span-logo-top {
+  color: var(--navyblue);
+}
+
+.link-nav {
+  transition-property: color;
+  transition-duration: var(--transition-dur);
+  transition-timing-function: var(--transition-function);
+}
+
+.link {
+  text-decoration: none;
+  transition-property: color;
+  transition-duration: var(--transition-dur);
+  transition-timing-function: var(--transition-function);
+}
+
+.link:hover,
+.link:focus {
+  color: var(--ocean);
+}
+
+.hamburger-btn {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.icon-hamburger {
+    stroke: var(--navyblue);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.header-section {
+    border-bottom: 1px solid var(--cornflower);
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+  }
+
+.menu-container {
+    display: none;
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .hamburger-btn {
+        display: none;
+    }
+    .menu-list,
+    .address {
+        display: flex;
+    }
+    .studiolist {
+        display: inline-block;
+        padding: 24px 0;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        font-weight: 500;
+        color: var(--navyblue);
+    }
+    
+    .address {
+        font-style: normal;
+    }
+    
+    .contacts {
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        font-weight: 400;
+        color: var(--slate);
+    }
+
+    .nav {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+    }
+
+    .nav .menu-list {
+        margin: 0 auto;
+    }
+
+    .nav-active::after {
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        content: "";
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        background-color: var(--ocean);
+      }
+
+      .studiolist.nav-active {
+        position: relative;
+        color: var(--ocean);
+      }
+      
+      .menu-list {
+        display: flex;
+        gap: 40px;
+      }
+
+
+      .address .menu-list {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .header-container {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+}
+
+@media screen and (min-width: 1158px) {
+    .nav {
+        flex-grow: 0;
+    }
+
+    .nav .menu-list {
+        margin: 0;
+    }
+
+    .address .menu-list {
+        flex-direction: row;
+        gap: 40px;
+      }
+
+    .logo {
+        margin-right: 76px;
+    }
+}
